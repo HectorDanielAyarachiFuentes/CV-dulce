@@ -1,0 +1,189 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: '#1e3a8a', /* Azul oscuro */
+								foreground: '#f3f4f6' /* Gris claro */
+							},
+							secondary: {
+								DEFAULT: '#3b82f6', /* Azul intermedio */
+								foreground: '#e5e7eb' /* Gris claro */
+							},
+							destructive: {
+								DEFAULT: '#ef4444', /* Rojo vibrante */
+								foreground: '#f9fafb' /* Gris muy claro */
+							},
+							muted: {
+								DEFAULT: '#9ca3af', /* Gris neutro */
+								foreground: '#1f2937' /* Gris oscuro */
+							},
+							accent: {
+								DEFAULT: '#22d3ee', /* Turquesa */
+								foreground: '#f9fafb' /* Gris muy claro */
+							},
+							popover: {
+								DEFAULT: '#f3f4f6', /* Fondo gris claro */
+								foreground: '#374151' /* Gris oscuro */
+							},
+							card: {
+								DEFAULT: '#f9fafb', /* Fondo gris claro */
+								foreground: '#111827' /* Gris oscuro */
+							},
+						},
+						fontFamily: {
+							sans: ['Inter', 'sans-serif']
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 240 4% 98%; /* Fondo gris muy claro */
+					--foreground: 240 6% 18%; /* Texto gris oscuro */
+					--card: 240 4% 98%; /* Fondo de tarjetas */
+					--card-foreground: 240 10% 3.9%; /* Texto oscuro */
+					--primary: 230 36% 33%; /* Azul oscuro */
+					--primary-foreground: 0 0% 98%; /* Texto claro */
+					--secondary: 212 80% 56%; /* Azul brillante */
+					--secondary-foreground: 0 0% 100%; /* Blanco */
+					--muted: 240 10% 92%; /* Gris claro */
+					--muted-foreground: 240 5% 20%; /* Gris oscuro */
+					--accent: 186 86% 53%; /* Turquesa */
+					--accent-foreground: 0 0% 98%; /* Blanco */
+					--destructive: 0 84.2% 60.2%; /* Rojo */
+					--destructive-foreground: 0 0% 98%; /* Blanco */
+					--border: 240 5.9% 90%; /* Bordes suaves */
+					--input: 240 5.9% 90%;
+					--ring: 240 5.9% 10%;
+					--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 15%; /* Fondo oscuro */
+					--foreground: 0 0% 98%; /* Texto claro */
+					--card: 240 12% 20%; /* Fondo oscuro para tarjetas */
+					--card-foreground: 0 0% 98%; /* Texto claro */
+					--primary: 240 90% 80%; /* Azul brillante en modo oscuro */
+					--primary-foreground: 0 0% 98%; /* Texto claro */
+					--secondary: 240 15% 30%; /* Azul apagado en modo oscuro */
+					--secondary-foreground: 0 0% 98%; /* Blanco */
+					--muted: 240 10% 30%; /* Gris oscuro */
+					--muted-foreground: 0 0% 100%; /* Blanco */
+					--accent: 186 80% 60%; /* Turquesa */
+					--accent-foreground: 0 0% 98%; /* Blanco */
+					--destructive: 0 62.8% 30.6%; /* Rojo oscuro */
+					--destructive-foreground: 0 0% 98%; /* Blanco */
+					--border: 240 3.7% 15.9%; /* Bordes oscuros */
+					--input: 240 3.7% 15.9%;
+					--ring: 240 5% 83.9%;
+				}
+			}
+		</style>
+  </head>
+  <body class="bg-background text-foreground font-sans">
+    <div class="bg-card p-6 rounded-lg shadow-lg">
+      <div class="relative">
+        <img class="w-full h-48 object-cover rounded-t-lg" src="https://scontent.fnqn4-1.fna.fbcdn.net/v/t39.30808-6/353778281_6626626664095365_1009348382811066866_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=NkyYV1pz2HcQ7kNvgFgxW7O&_nc_ht=scontent.fnqn4-1.fna&_nc_gid=AbZeTbsaAhdPktjSOh2Mu6v&oh=00_AYBBSkEkr--AypyrpMnFl31HVmiYaGlLrfmimPZCqwQ5Og&oe=66F3542E" alt="Cover Image" />
+        <button class="absolute top-4 right-4 bg-secondary text-secondary-foreground hover:bg-secondary/80 p-2 rounded">Descargar CV</button>
+      </div>
+      <div class="flex flex-col md:flex-row items-center mt-4">
+        <img class="w-24 h-24 rounded-full border-2 border-white mb-4 md:mb-0 md:mr-4 object-cover" src="https://scontent.fnqn4-1.fna.fbcdn.net/v/t39.30808-6/451789065_8209380152486667_1843575800903345564_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=Axy5PJUkyuMQ7kNvgFRKXZP&_nc_ht=scontent.fnqn4-1.fna&_nc_gid=AhMbHqU4XDyubD8T0LNozQc&oh=00_AYDfFjQBkvZgNta9aaGc-suF4OCkGRWmilDupDhRpQiyQg&oe=66F34E4E" alt="Profile Picture" />
+        <div>
+          <h2 class="text-lg font-bold text-foreground">Héctor Ayarachi</h2>
+          <p class="text-muted-foreground">Tec. en RRHH</p>
+        </div>
+      </div>
+      
+<div class="mt-4 flex flex-col md:flex-row">
+  <button class="bg-primary text-primary-foreground hover:bg-primary/80 p-2 rounded mb-2 md:mb-0 md:mr-2">Ver LinkedIn</button>
+  <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 p-2 rounded mb-2 md:mb-0 md:mr-2">Enviar correo</button>
+  <button class="bg-accent text-accent-foreground hover:bg-accent/80 p-2 rounded mb-2 md:mb-0 md:mr-2">Llamar</button>
+  <button class="bg-primary text-primary-foreground hover:bg-primary/80 p-2 rounded mb-2 md:mb-0 md:mr-2">Ver GitHub</button>
+  <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 p-2 rounded">Agregar a contactos</button>
+</div>
+
+      
+      
+      
+
+    
+ 
+<div id="cv-container" class="mt-8 p-6 border-2 border-dashed rounded-lg transition-colors duration-500">
+	<h3 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-gray-400 pb-2 text-center">Información del CV</h3>
+	<div class="grid grid-cols-1 gap-8">
+	  <div class="p-6 border border-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+		<h4 class="font-semibold text-2xl text-gray-700 mb-3">Experiencia Laboral</h4>
+		<ul class="list-disc list-inside text-gray-600">
+		  <li>Analista de Recursos Humanos en Empresa ABC (2019 - presente)</li>
+		  <li>Coordinador de Capacitación en Empresa XYZ (2016 - 2019)</li>
+		</ul>
+	  </div>
+	  <div class="p-6 border border-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+		<h4 class="font-semibold text-2xl text-gray-700 mb-3">Educación</h4>
+		<ul class="list-disc list-inside text-gray-600">
+		  <li>Licenciatura en Recursos Humanos - Universidad Nacional del Comahue (2012 - 2016)</li>
+		  <li>Técnico en Programación Web - Instituto ITEC (2017 - 2019)</li>
+		</ul>
+	  </div>
+	  <div class="p-6 border border-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+		<h4 class="font-semibold text-2xl text-gray-700 mb-3">Habilidades</h4>
+		<ul class="list-disc list-inside text-gray-600">
+		  <li>Gestión de talento humano</li>
+		  <li>Desarrollo de software (HTML, CSS, JavaScript)</li>
+		  <li>Capacitación y desarrollo de personal</li>
+		</ul>
+	  </div>
+	  <div class="p-6 border border-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+		<h4 class="font-semibold text-2xl text-gray-700 mb-3">Certificaciones</h4>
+		<ul class="list-disc list-inside text-gray-600">
+		  <li>Certificación en Gestión de Proyectos - PMI (2021)</li>
+		  <li>Certificación en Análisis de Datos - Coursera (2020)</li>
+		</ul>
+	  </div>
+	</div>
+  </div>
+  
+  <script>
+	function getRandomColor() {
+	  const letters = '0123456789ABCDEF';
+	  let color = '#';
+	  for (let i = 0; i < 6; i++) {
+		color += letters[Math.floor(Math.random() * 16)];
+	  }
+	  return color;
+	}
+  
+	function changeBorderColor() {
+	  const container = document.getElementById('cv-container');
+	  container.style.borderColor = getRandomColor();
+	}
+  
+	// Cambia el color cada 2 segundos
+	setInterval(changeBorderColor, 2000);
+  </script>
+  
+
+    
+  <footer class="mt-8 p-6 bg-gray-200 rounded-lg shadow-lg text-center">
+	<p class="text-gray-700">© 2024 Héctor Daniel Ayarachi Fuentes. Todos los derechos reservados.</p>
+	<p class="text-gray-600">Contacto: hector.ayarachi@email.com</p>
+  </footer>
+    
+    
+  </body>
+</html>
